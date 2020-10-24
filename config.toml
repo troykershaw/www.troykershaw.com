@@ -1,0 +1,36 @@
+baseURL = "https://www.troykershaw.com/"
+defaultContentLanguage = "en"
+hasCJKLanguage = true
+languageCode = "en"
+paginate = 10
+theme = "texify"
+title = "Troy Kershaw's Website"
+
+pygmentsUseClasses = true
+
+[author]
+name = "Troy"
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[[menu.main]]
+  identifier = "post"
+  name = "Posts"
+  url = "/"
+  weight = 1
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 2
+
+[params]
+  custom_css = []
+  description = "A blog on whatever thing I'm interested in at the time, most likely making software."
+  enable_mathjax = true
+  footnote = "<a class=link href=https://github.com/troykershaw>GitHub</a> | <a class=link href=https://www.linkedin.com/in/troykershaw>LinkedIn</a> | <a class=link href=/index.xml>RSS</a>"
+  keywords = []
