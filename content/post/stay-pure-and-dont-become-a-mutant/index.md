@@ -2,7 +2,7 @@
 title = "Stay Pure and Don't Become a Mutant"
 date = 2014-09-09
 
-tags = ["f#", "fsharp"]
+tags = ["fsharp"]
 +++
 
 The inaugural [Sydney F# User Group](http://www.meetup.com/fsharpsydney) meeting was held on 1 July. We had a great turn out and great times were had by all. There were two talks, one by me, the other by the amazing [Jorge Fioranelli](https://twitter.com/jorgefioranelli) who runs the user group with me.

@@ -2,7 +2,7 @@
 title = "Getting Started with SignalR using F# and OWIN"
 date = 2015-12-23
 
-tags = ["F#", "SignalR", "Owin"]
+tags = ["fsharp", "signalr", "owin"]
 +++
 
 [SignalR](http://signalr.net/) allows us to easily push messages back and forth between a client (usually a website) and server using websockets. All of the pain of creating a connection, keeping the connection alive, reconnecting, serialising and deserialising messages, plus lots, lots more is taken care of for you.

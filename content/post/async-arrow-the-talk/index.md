@@ -2,7 +2,7 @@
 title = "AsyncArrow - The Talk"
 date = 2018-06-09
 
-tags = ["F#", "Async", "NDC"]
+tags = ["fsharp", "async", "ndc"]
 +++
 
 In January 2017 I spoke at NDC London about async arrows. The video is below. Enjoy!
