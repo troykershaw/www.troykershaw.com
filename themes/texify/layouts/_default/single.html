@@ -17,7 +17,22 @@
       </div>
       {{ else }}
       <!-- post -->
-      <h1>{{ .Title }}</h1>
+      <h1>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </h1>
+      <div>
+        <time>{{ .PublishDate.Format "2006-01-02" }}</time>
+        {{ $tags := .Params.tags}}
+        {{ if ne $tags nil }}
+        [
+          {{ $n := (len $tags) }}
+          {{ range $i, $e := $tags }}
+            <a class="link" href='{{ "tags" | absURL }}/{{ . | urlize }}'>{{ . }}</a>
+            {{ if ne (add $i 1) $n }},{{ end }}
+          {{ end }}
+        ]
+        {{ end }}
+      </div>
       <div class="content">
         {{ .Content }}
       </div>
