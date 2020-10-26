@@ -51,23 +51,22 @@ But as discussed earlier, we can go much faster than that.
 
 ## O(n) approach
 
-Given the target, `t`, we're trying to find the index of numbers `a` and `b` such that `a + b = t`. In the approach above, for each `a` we looked at all items after `a` to see if they satisfied `b`; to solve the problem in a single pass, however, we need to look to the past.
+In the approach above, for each `i` we looked at all items after `i` to see if their sum equaled the target; to solve the problem in a single pass, however, we look to the past.
 
-Solving for `b`, our simple equation above becomes `b = t - a`, so as we iterate through the list we can store what `b` value we would need to satisfy the equation along with the index of `a`. For each item we look to see if there was already an `a` that was looking for the number we currently have and if we do we get the index of `a` and return. A perfect application for a hash table.
+We're trying to solve `a + b = t`, and solving for `a`, we get `a = t - b`. For each number in the collection, assume that it's `b`. We already know `t` so we can work out what `a` we would need to satisfy the equation (`t - b`) and check if we've already seen it. In the O(n<sup>2</sup>) approach we looked forward, requiring another loop, but by storing all items we've already seen in a hash table we can check for `a` in constant time.
 
 ```rust
-use std::collections::HashMap;
-
 fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
     if nums.len() < 2 { panic!("'nums' must have at least two items.") };
 
-    let mut diffs: HashMap<i32, usize> = HashMap::new();
+    let mut prev: HashMap<i32, usize> = HashMap::with_capacity(nums.len());
 
     for (i, n) in nums.iter().enumerate() {
-        match diffs.get(&n) {
-            Some(&i0) => return vec![i0 as i32, i as i32],
-            None => { diffs.insert(&target - n, i); }
+        if let Some(p) = prev.get(&(target - n)) {
+            return vec![*p as i32, i as i32]
         }
+
+        prev.insert(*n, i);
     }
     
     panic!("No items sum to the target")
@@ -85,5 +84,5 @@ And LeetCode says:
 
 ```text
 Runtime: 0 ms, faster than 100.00% of Rust online submissions for Two Sum.
-Memory Usage: 2.5 MB, less than 21.68% of Rust online submissions for Two Sum.
+Memory Usage: 2.3 MB, less than 21.68% of Rust online submissions for Two Sum.
 ```
