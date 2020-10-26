@@ -53,7 +53,7 @@ But as discussed earlier, we can go much faster than that.
 
 In the approach above, for each `i` we looked at all items after `i` to see if their sum equaled the target; to solve the problem in a single pass, however, we look to the past.
 
-We're trying to solve `a + b = t`, and solving for `a`, we get `a = t - b`. For each number in the collection, assume that it's `b`. We already know `t` so we can work out what `a` we would need to satisfy the equation (`t - b`) and check if we've already seen it. In the O(n<sup>2</sup>) approach we looked forward, requiring another loop, but by storing all items we've already seen in a hash table we can check for `a` in constant time.
+We're trying to solve `a + b = t`, and solving for `a`, we get `a = t - b`. For each number in the collection, assume that it's `b`. We already know `t` so we can work out what the value of `a` we need to satisfy the equation (`t - b`) and check if we've already seen it. In the O(n<sup>2</sup>) approach we looked forward, requiring another loop, but by storing all items we've already seen in a hash table we can check for `a` in constant time.
 
 ```rust
 fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
