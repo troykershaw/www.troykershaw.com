@@ -80,7 +80,7 @@ fn two_sum_test() {
 }
 ```
 
-And LeetCode says:
+and LeetCode says...
 
 ```text
 Runtime: 0 ms, faster than 100.00% of Rust online submissions for Two Sum.
