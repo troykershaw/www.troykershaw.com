@@ -37,5 +37,5 @@ name = "Troy"
   custom_css = []
   description = "A blog on whatever thing I'm interested in at the time, most likely making software."
   enable_mathjax = true
-  footnote = "<a class=link href=https://github.com/troykershaw>GitHub</a> | <a class=link href=https://www.linkedin.com/in/troykershaw>LinkedIn</a> | <a class=link href=/index.xml>RSS</a>"
+  footnote = "<a class=link href=https://github.com/troykershaw>GitHub</a> | <a class=link href=https://www.linkedin.com/in/troykershaw>LinkedIn</a> | <a class=link href=https://twitter.com/troykershaw>Twitter</a> | <a class=link href=/index.xml>RSS</a>"
   keywords = []
