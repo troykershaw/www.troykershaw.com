@@ -1,16 +1,21 @@
 +++
 title = "Longest Substring Without Repeating Characters in Rust"
+summary = ""
 date = 2020-10-25
 
 tags = ["rust", "leetcode", "problem"]
 +++
+
+Another nice little LeetCode problem.
+
+<!--more-->
 
 ## Problem
 
 Given a string, find the length of the longest substring without repeating characters.
 
 Input | Output | Longest substring
-- | - | -
+--- | --- | ---
 `"abcdabcbd"` | 4 | `"abcd"`
 `"aaaaaa"` | 1 | `"a"`
 `"tidddosa"` | 4 | `"dosa"`
