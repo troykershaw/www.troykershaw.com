@@ -7,6 +7,8 @@ tags = ["rust", "clrs", "algorithm"]
 
 This implementation is pretty much straight out of the [book](https://en.wikipedia.org/wiki/Introduction_to_Algorithms) and we're required to use the `Copy` trait as a result, limiting `T` a great deal.
 
+<!--more-->
+
 ```rust
 fn insertion_sort_with_copy<T: PartialOrd + Copy>(a: &mut [T]) {
     for j in 1..a.len() {
