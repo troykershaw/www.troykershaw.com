@@ -28,10 +28,15 @@ name = "Troy"
   url = "/tags/problem"
   weight = 2
 [[menu.main]]
+  identifier = "algorithm"
+  name = "Algorithms"
+  url = "/tags/algorithm"
+  weight = 3
+[[menu.main]]
   identifier = "about"
   name = "About"
   url = "/about/"
-  weight = 3
+  weight = 4
 
 [params]
   custom_css = []
